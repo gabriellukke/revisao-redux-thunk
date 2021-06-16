@@ -1,4 +1,4 @@
-# Revisão-redux-bloco-16
+# Revisão-redux-thunk-bloco-16
 Repositório para o Plantão de Revisão do Redux Thunk do Bloco de Redux, o código original sem o uso do Redux está na branch **main**.
 
 E a resolução vai ser feita na branch **jokesandmemes-redux-turma-X**.
