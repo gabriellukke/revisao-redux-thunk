@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Revisão-redux-bloco-16
+Repositório para o Plantão de Revisão do Redux Thunk do Bloco de Redux, o código original sem o uso do Redux está na branch **main**.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+E a resolução vai ser feita na branch **jokesandmemes-redux-turma-X**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Código base
 
-### `npm start`
+O código está na parte inicial após o comando `create-react-app`, e nele iremos criar a nossa aplicação ,contando com:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Componente para a Piada
+  - um componente simples onde a piada deverá ser renderizada
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Componente para o meme
+  - um componente simples onde o meme deverá ser renderizado
 
-### `npm test`
+- Componente de Barra de Pesquisa
+  - um componente onde deve haver uma barra de pesquisa para o usuário buscar a piada por uma categoria
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Objetivo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O objetivo é criar uma aplicação simples que faça uma requisição de duas APIs, uma de memes e outra de piadas, e nos mostre na tela o meme ou a piada através do click do usuário, para isso será necessário instalar as dependências,`redux`, `react-redux`, `redux-thunk` e `redux-devtools-extension`. Caso queira, utilize essa [sugestão](##-checklist-do-react-redux-(sugestão)) de checklist, para guiar o inicio do desenvolvimento do Redux
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
+## Checklist do react redux (sugestão)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+*Antes de começar*
+- [ ] pensar como será o *formato* do seu estado global
+- [ ] pensar quais actions serão necessárias na sua aplicação
 
-### `npm run eject`
+*Criar dentro do diretório src:*
+- [ ] diretório actions;
+- [ ] diretório reducers;
+- [ ] diretório store.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+*Criar dentro do diretório actions:*
+- [ ] arquivo index.js.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+*Criar dentro do diretório reducers:*
+- [ ] arquivo index.js.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+*Criar dentro do diretório store:*
+- [ ] arquivo index.js.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+*No arquivo App.js:*
+- [ ] definir o Provider, `<Provider store={ store }>`, para fornecer os estados à todos os componentes encapsulados em `<App />`.
 
-## Learn More
+*No arquivo store/index.js:*
+- [ ] criar a store
+- [ ] configurar o [Redux DevTools](https://github.com/reduxjs/redux-devtools)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+*Na pasta reducers:*
+- [ ] criar os reducers necessários em arquivos separados
+- [ ] importar o rootReducer no arquivo index e utilizar os reducers criados
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+*Na pasta actions:*
+- [ ] criar os actionTypes, por exemplo: `const ADD_TO_CART = 'ADD_TO_CART';`
+- [ ] criar os actions creators necessários
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*Nos componentes:*
+- [ ] criar a função mapStateToProps
+- [ ] criar a função mapDispatchToProps
+- [ ] fazer o connect
