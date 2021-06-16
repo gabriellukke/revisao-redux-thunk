@@ -7,7 +7,7 @@ E a resolução vai ser feita na branch **jokesandmemes-redux-turma-X**.
 
 ## Código base
 
-O código está na parte inicial após o comando `create-react-app`, e nele iremos criar a nossa aplicação ,contando com:
+O código está na parte inicial após o comando `create-react-app`, e nele iremos criar a nossa aplicação, contando com:
 
 - Componente para a Piada
   - um componente simples onde a piada deverá ser renderizada
@@ -17,6 +17,10 @@ O código está na parte inicial após o comando `create-react-app`, e nele irem
 
 - Componente de Barra de Pesquisa
   - um componente onde deve haver uma barra de pesquisa para o usuário buscar a piada por uma categoria
+
+- As APIs de Piadas e Memes
+  - API de memes: https://api.imgflip.com/get_memes
+  - API de piadas(Com um termo para a categoria): https://icanhazdadjoke.com/search?term=
 
 ---
 
